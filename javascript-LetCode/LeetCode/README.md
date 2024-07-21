@@ -1,0 +1,1 @@
+The goal of this project is to complete every single one of the LeetCode questions. Let's see how far I can go.
