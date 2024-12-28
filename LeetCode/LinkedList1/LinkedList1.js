@@ -30,7 +30,7 @@ function printLinkedList (head) {
 
 function removeDuplicatesFromLinkedList (linkedList) {
   let currentNode = linkedList
-
+  // let currentNode = null
   while (currentNode !== null) {
     while (
       currentNode.next !== null &&
