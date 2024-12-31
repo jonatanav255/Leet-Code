@@ -61,10 +61,9 @@ class LinkedList {
 }
 const myLinkedList = new LinkedList()
 
-myLinkedList.append(10)
-myLinkedList.append(null)
-myLinkedList.append(2)
-myLinkedList.append(3)
+myLinkedList.prepend(1)
+myLinkedList.prepend(2)
+myLinkedList.prepend(3)
 
 myLinkedList.printList()
 
