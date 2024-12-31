@@ -15,6 +15,11 @@ class LinkedList {
 
   // Add a new node at the end of the list - 0(n)
   append (data) {
+    if (data === null) {
+      console.error('Null values are not allowed in the linked list.')
+      return // Exit the method without adding the node
+    }
+
     const newNode = new Node(data)
     if (this.head === null) {
       // If the list is empty, set the head to the new node
@@ -48,12 +53,10 @@ class LinkedList {
 }
 const myLinkedList = new LinkedList()
 
-// myLinkedList.append(10)
-myLinkedList.append(1)
+myLinkedList.append(10)
+myLinkedList.append(null)
 myLinkedList.append(2)
 myLinkedList.append(3)
-
-
 
 myLinkedList.printList()
 
