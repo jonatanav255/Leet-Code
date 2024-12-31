@@ -35,13 +35,13 @@ class LinkedList {
     this.size++ // Increment the size of the list
   }
 
-    // Add a new node at the beginning of the list
-    prepend(data) {
-      const newNode = new Node(data);
-      newNode.next = this.head; // Point the new node to the current head
-      this.head = newNode;      // Update the head to the new node
-      this.size++;
-    }
+  // Add a new node at the beginning of the list O(1)
+  prepend (data) {
+    const newNode = new Node(data)
+    newNode.next = this.head // Point the new node to the current head
+    this.head = newNode // Update the head to the new node
+    this.size++
+  }
 
   // Print the linked list as an array for easier visualization
   printList () {
