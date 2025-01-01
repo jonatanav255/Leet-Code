@@ -58,12 +58,48 @@ class LinkedList {
   getSize () {
     return this.size
   }
+
+  // Remove a node by value O(n)
+  remove (data) {
+    if (this.head === null) {
+      console.log('List is empty!')
+      return
+    }
+
+    // If the head node holds the value to be removed
+    if (this.head.data === data) {
+      this.head = this.head.next // Move the head to the next node
+      this.size--
+      return
+    }
+
+    // Traverse the list to find the node to remove
+    let current = this.head
+    let previous = null
+
+    while (current !== null && current.data !== data) {
+      previous = current
+      current = current.next
+    }
+
+    if (current === null) {
+      console.log('Value not found in the list!')
+      return
+    }
+
+    // Remove the node by skipping it in the chain
+    previous.next = current.next
+    this.size--
+  }
 }
+
 const myLinkedList = new LinkedList()
 
-myLinkedList.prepend(1)
-myLinkedList.prepend(2)
+myLinkedList.prepend(4)
 myLinkedList.prepend(3)
+myLinkedList.prepend(2)
+myLinkedList.prepend(1)
+myLinkedList.remove(3);
 
 myLinkedList.printList()
 
