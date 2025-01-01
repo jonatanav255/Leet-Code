@@ -23,22 +23,38 @@ class Stack {
     // Use the native `pop` method to remove and return the last element
     return this.items.pop()
   }
+
+  // Peek (return the top element without removing it)
+  peek () {
+    if (this.isEmpty()) {
+      // Prevent peeking when the stack is empty
+      throw new Error('Stack is empty')
+    }
+    // Return the last element
+    return this.items[this.items.length - 1]
+  }
 }
 
 const stack = new Stack()
 console.log('--------- Stack --------')
 
-stack.push(1)
-stack.push(2)
-stack.push(3)
+try {
+  console.log(stack.pop()) // This will throw an error because the stack is empty
+} catch (error) {
+  console.error('Error:', error.message) // Handle the error gracefully
+}
 
-console.log('Stack:')
-console.log(stack.items)
+// stack.push(1)
+// stack.push(2)
+// stack.push(3)
 
-console.log('Popped:', stack.pop())
-console.log('Popped:', stack.pop())
+console.log('Stack:', stack.items)
+// console.log('Peek:', stack.peek())
 
-console.log('Stack:')
-console.log(stack.items)
+// console.log('Popped:', stack.pop())
+// console.log('Popped:', stack.pop())
+
+// console.log('Stack:')
+// console.log(stack.items)
 
 console.log('--------- Stack --------')
