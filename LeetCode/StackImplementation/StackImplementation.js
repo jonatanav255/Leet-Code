@@ -3,7 +3,7 @@ class Stack {
     this.items = [] // Array to store stack elements
   }
 
-  // Check if the stack is empty (custom method)
+  // Check if the stack is empty
   isEmpty () {
     return this.items.length === 0
   }
@@ -16,4 +16,17 @@ class Stack {
 }
 
 const stack = new Stack()
-console.log(stack)
+console.log("--------- Stack --------")
+console.log("Is stack empty? ", stack.isEmpty()); // Output: false
+
+
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+console.log("Is stack empty? ", stack.isEmpty()); // Output: false
+
+console.log(stack.items)
+
+console.log("--------- Stack --------")
+
