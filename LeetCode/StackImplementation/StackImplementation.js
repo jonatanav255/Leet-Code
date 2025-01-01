@@ -12,21 +12,19 @@ class Stack {
   push (element) {
     this.items.push(element)
   }
-
 }
 
 const stack = new Stack()
-console.log("--------- Stack --------")
-console.log("Is stack empty? ", stack.isEmpty()); // Output: false
-
+console.log('--------- Stack --------')
+console.log('Is stack empty? ', stack.isEmpty()) // Output: false
 
 stack.push(1)
 stack.push(2)
 stack.push(3)
 
-console.log("Is stack empty? ", stack.isEmpty()); // Output: false
+console.log('Is stack empty? ', stack.isEmpty()) // Output: false
 
+console.log('Stack:')
 console.log(stack.items)
 
-console.log("--------- Stack --------")
-
+console.log('--------- Stack --------')
