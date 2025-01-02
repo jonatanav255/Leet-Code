@@ -54,14 +54,6 @@ console.log('--------- Stack --------')
 stack.push(1)
 stack.push(2)
 stack.push(3)
-
-// console.log('Stack:', stack.items)
-// console.log('Peek:', stack.peek())
-
-// console.log('Popped:', stack.pop())
-// console.log('Popped:', stack.pop())
-
-// console.log('Stack:')
 console.log(stack.min())
 console.log(stack.max())
 
