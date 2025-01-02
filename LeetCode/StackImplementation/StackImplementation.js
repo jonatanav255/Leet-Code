@@ -33,28 +33,36 @@ class Stack {
     // Return the last element
     return this.items[this.items.length - 1]
   }
+
+  min() {
+    if (this.isEmpty()) {
+      throw new Error('Stack is empty')
+    }
+    return Math.min(...this.items)
+  }
+  max(){
+    if(this.isEmpty()){
+      throw new Error("Stack is empty")
+    }
+    return Math.max(...this.items)
+  }
 }
 
 const stack = new Stack()
 console.log('--------- Stack --------')
 
-try {
-  console.log(stack.pop()) // This will throw an error because the stack is empty
-} catch (error) {
-  console.error('Error:', error.message) // Handle the error gracefully
-}
+stack.push(1)
+stack.push(2)
+stack.push(3)
 
-// stack.push(1)
-// stack.push(2)
-// stack.push(3)
-
-console.log('Stack:', stack.items)
+// console.log('Stack:', stack.items)
 // console.log('Peek:', stack.peek())
 
 // console.log('Popped:', stack.pop())
 // console.log('Popped:', stack.pop())
 
 // console.log('Stack:')
-// console.log(stack.items)
+console.log(stack.min())
+console.log(stack.max())
 
 console.log('--------- Stack --------')
